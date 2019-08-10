@@ -9,8 +9,8 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b, c = 0) { //eslint-disable-line
-  var mySum = a + b + c;
+function sum(a, b) { //eslint-disable-line
+  var mySum = a + b;
   return [mySum, 'The sum of ' + a + ' and ' + b + ' is ' + mySum + '.'];
 }
 
@@ -106,8 +106,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var multiply5 = multiply((multiply(testArray[0], testArray[1]).shift()), testArray[2]).shift();
+  return [multiply5, 'The numbers ' + testArray.toString() + ' have a product of ' + multiply5 + '.'];
 }
+console.log(multiplyArray(testArray));
+// Here is the test for multiplyArray(); uncomment it to run it
+testMultiplyArray(testArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
